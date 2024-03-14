@@ -164,3 +164,110 @@
 #send-location:hover {
     background-color: #075e54; /* WhatsApp green on hover */
 }
+@media screen and (max-width: 600px) {
+    .centered-form__box {
+        width: 100%;
+        padding: 0; /* Remove padding for full-width chat */
+    }
+
+    .centered-form button,
+    .centered-form input {
+        font-size: 14px;
+        padding: 12px; /* Adjust padding for buttons and inputs */
+    }
+
+    .chat {
+        flex-direction: column; /* Adjust chat layout for mobile */
+        height: 100%; /* Ensure chat takes full height of the screen */
+    }
+
+    .chat__sidebar {
+        width: 100%;
+        max-width: none;
+        height: auto; /* Adjust sidebar height dynamically */
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+
+    .chat__main {
+        width: 100%;
+        max-width: none;
+        flex-grow: 1; /* Ensure main content takes remaining space */
+        height: auto; /* Adjust main content height dynamically */
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+
+    .chat__messages {
+        padding: 16px;
+    }
+
+    .compose {
+        padding: 16px;
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Space items evenly */
+    }
+
+    .compose input {
+        flex-grow: 1;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 12px 16px;
+        margin: 8px 0; /* Add margin for better separation */
+    }
+
+    .compose button,
+    #send-location {
+        padding: 12px 24px;
+        margin-left: 8px; /* Add margin between input and button */
+    }
+
+    .message {
+        margin-bottom: 12px;
+    }
+
+    .message__name {
+        display: none; /* Hide message sender's name on small screens */
+    }
+    .chat {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative; /* Set position to relative for absolute positioning */
+    }
+
+    .chat__main {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 16px;
+    }
+
+    .compose {
+        position: absolute; /* Position the compose section absolutely */
+        bottom: 0; /* Position at the bottom */
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        background-color: #f0f0f0; /* Add background color for better visibility */
+    }
+
+    .compose input {
+        width: calc(100% - 100px); /* Adjust input width */
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+
+    .compose button {
+        width: 80px; /* Adjust button width */
+        padding: 12px;
+        margin-left: 10px; /* Add some margin between input and button */
+        border: none;
+        background-color: #075e54; /* WhatsApp green */
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+}
+
+
